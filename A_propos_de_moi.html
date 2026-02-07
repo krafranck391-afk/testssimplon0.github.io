@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>A propos de moi</title>
+        <link rel="stylesheet" href="style2.css"/>
+        <script>
+            const text = document.getElementById('texte-defilant');
+            let position = 0;
+
+            function animate() {
+                position--;
+
+                if (position < -text.offsetWidh) {
+                    position = window.innerWidth;
+                }
+
+                text.style.transform = `translateX(${position}px)`;
+
+                requestAnimationFrame(animate);
+            }
+
+            animate ();
+        </script>
+    </head>
+<body>
+     <header id="kkfa">
+        <h1>Kra Kouakou Franck Arnaud</h1>
+        <div class="contenant">
+            <P class="texte-defilant" id="texte-defilant"> PSAME 60V14 : Avec DIEU, nous ferons des exploits; il écrasera nos énemis.</P>
+        </div>
+    </header>
+    <div id="div1">
+        <img  class="img" src="IMG-20250603-WA0054.jpg" title="Kra Franck">
+        <p class="link">0768095128 / 0153815831<br><img src="CT.png" title="contact"></p>
+        <p class="link">krafranck391@gmail.com<br><img src="MAIL.png" title="mail"></p>
+        <p class="link">Koumassi, CI<br><img src="MAP.png" title="lieu"></p>
+    </div>
+    <div>
+        <section id="sec3">
+           <h1 id="sec4">A propos de moi</h1>
+           <div class="depliant">
+                <h3 id="sec5">Ma petite histoire</h3>
+                <p class="p">Je suis Monsieur Kra Kouakou Franck Arnaud ainé d’une famille de 05 enfants, étudiant et prédicateur de l’évangile.
+                             J’ai découvert l’informatique en classe de CM1 et depuis lors je rêve que d’une chose. C’est de devenir informaticien développeur de préférence.
+                             Pour plus tard développeur et bâtir ma propre entreprise d’informatique.
+</p>
+            </div>
+            <div class="depliant">
+                <h3 id="sec6">Parcours</h3>
+                <p class="p">J’ai fait la plus grande partie de mes études au primaire dans la ville de Divo. 
+                    Cependant j’ai dû les terminés à Bouaké suite à l’affectation de Papa, où j’ai fait 
+                    le CM2 et obtenu en 2010 mon CEPE dans une école privé chrétienne. Par la suite en
+                    2014 j’ai obtenu mon BEPC au collège OBAMA de Bouaké. Puis mon Bac D en 2019 au 
+                    Collège Tesla de Bouaké. Sanctionné du Bac j’ai étais affecté en EPSS à l’Université 
+                    Nangui Abrogoua d’Abobo-Adjamé en 2019 où j’ai fait deux ans.</p>
+            </div>
+            <div class="depliant">
+                <h3 id="sec7">Centre d'intéret</h3>
+                <p class="p">Je m’intéresse énormément à la religion, la science notamment le domaine des TIC, il y a également le sport, 
+                    la lecture et les films bon pour ce qui concerne les livre et les filme je n’ai pas vraiment de préférence.</p>
+            <div>
+        </section>
+    </div>
+   
+<footer id="footer">
+        <p class="p3">Suivez moi sur mes caneaux</p>
+            <div class="KF"><a href="https://www.facebook.com/share/1BygNJVfSU/"><img src="FB.png"></a></div>
+            <div class="KF"><a href="https://www.instagram.com/arnaud_kra?igsh=MXJyaDNqaHdicHQyOQ=="><img src="ISTG.png"></a></div>
+            <div class="KF"><a href="https://wa.me/qr/ZULCSAFAJTNHL1"><img src="WHP.png"></a></div>
+        <p class="p4"><a href="mailto:krafranck391@gmail.com">Envois moi un mail</a></p>
+    </footer>
+</body>
+</html>

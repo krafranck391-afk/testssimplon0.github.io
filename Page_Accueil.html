@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset = "utf-8">
+        <title>Page Accueil</title>
+        <link rel="stylesheet" href="style1.css"/>
+        <script>
+            const text = document.getElementById('texte-defilant');
+            let position = 0;
+
+            function animate() {
+                position--;
+
+                if (position < -text.offsetWidh) {
+                    position = window.innerWidth;
+                }
+
+                text.style.transform = `translateX(${position}px)`;
+
+                requestAnimationFrame(animate);
+            }
+
+            animate ();
+        </script>
+    </head>
+<body>
+    <header id="kkfa">
+        <h1>Kra Kouakou Franck Arnaud</h1>
+        <div class="contenant">
+            <P class="texte-defilant" id="texte-defilant"> PSAME 60V14 : Avec DIEU, nous ferons des exploits; il écrasera nos énemis.</P>
+        </div>
+    </header>
+    <div id="principal">
+     <div id="photo1">
+        <img id="img" src="IMG-20250603-WA0054.jpg" alt="All is grace" title="Un souvenir">
+     </div>
+     <nav id="section">
+        <section>
+                <h1 class="bv">Bienvenue !</h1>
+                <p class="p1">sur mon site web</p>
+                <p class="p2">Clique sur les liens ci-dessous pour en savoir plus sur moi.</p>
+        </section>
+        <section id="sec1">
+                         <div id="ap"><a href="A_propos_de_moi.html">A propos de moi</a></div>
+                        <div id="ps"><a href="Ce_qui_me_passionne.html">Mes loisirs</a></div> 
+        </section>
+     </nav>
+    </div>
+    <footer id="footer">
+        <p class="p3">Suivez moi sur mes caneaux</p>
+            <div class="KF"><a href="https://www.facebook.com/share/1BygNJVfSU/"><img src="FB.png" title="Facebook"></a></div>
+            <div class="KF"><a href="https://www.instagram.com/arnaud_kra?igsh=MXJyaDNqaHdicHQyOQ=="><img src="ISTG.png" title="Instagram"></a></div>
+            <div class="KF"><a href="https://wa.me/qr/ZULCSAFAJTNHL1"><img src="WHP.png" title="WhatsApp"></a></div>
+        <p class="p4"><a href="mailto:krafranck391@gmail.com">Envois moi un mail</a></p>
+    </footer>
+
+</body>
+</html>

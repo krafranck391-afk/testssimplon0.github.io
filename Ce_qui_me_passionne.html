@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ce qui me passionne</title>
+        <link rel="stylesheet" href="style2.css"/>
+        <script>
+            const text = document.getElementById('texte-defilant');
+            let position = 0;
+
+            function animate() {
+                position--;
+
+                if (position < -text.offsetWidh) {
+                    position = window.innerWidth;
+                }
+
+                text.style.transform = `translateX(${position}px)`;
+
+                requestAnimationFrame(animate);
+            }
+
+            animate ();
+        </script>
+    </head>
+<body>
+     <header id="kkfa">
+        <h1>Kra Kouakou Franck Arnaud</h1>
+        <div class="contenant">
+            <P class="texte-defilant" id="texte-defilant"> PSAME 60V14 : Avec DIEU, nous ferons des exploits; il écrasera nos énemis.</P>
+        </div>
+    </header>
+    <div id="div1">
+        <img class="img" src="IMG-20250603-WA0054.jpg" title="Kra Franck">
+        <p class="link">0768095128 / 0153815831<br><img src="CT.png" title="contact"></p>
+        <p class="link">krafranck391@gmail.com<br><img src="MAIL.png" title="mail"></p>
+        <p class="link">krafranck391@gmail.com<br><img src="MAIL.png" title="mail"></p>
+    </div>
+    <div>
+        <section id="section">
+           <h1 id="sec4">Ce qui me passionne</h1>
+                <p class="p">J’aime énormément apprendre et découvrir de nouvelle choses, donc chaque que j’en ai l’opportunité de le faire je m’applique afin d’être, le meilleur.
+                    J’aime également la music surtout la musique chrétienne couramment appelé gospel, c’est musique qui m’inspire énormément. J’apprécie également la dance mais bof ce n’est pas mon fort.
+                    Je pratique également le Sport notamment le basketball et la cour d’endurance.</p>
+        </section>
+    </div>
+   
+<footer id="footer">
+        <p class="p3">Suivez moi sur mes caneaux</p>
+            <div class="KF"><a href="https://www.facebook.com/share/1BygNJVfSU/"><img src="FB.png"></a></div>
+            <div class="KF"><a href="https://www.instagram.com/arnaud_kra?igsh=MXJyaDNqaHdicHQyOQ=="><img src="ISTG.png"></a></div>
+            <div class="KF"><a href="https://wa.me/qr/ZULCSAFAJTNHL1"><img src="WHP.png"></a></div>
+        <p class="p4"><a href="mailto:krafranck391@gmail.com">Envois moi un mail</a></p>
+    </footer>
+</body>
+</html>
