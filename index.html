@@ -4,30 +4,28 @@
         <meta charset = "utf-8">
         <title>Page Accueil</title>
         <link rel="stylesheet" href="style1.css"/>
-        <script>
-            const text = document.getElementById('texte-defilant');
-            let position = 0;
-
-            function animate() {
-                position--;
-
-                if (position < -text.offsetWidh) {
-                    position = window.innerWidth;
-                }
-
-                text.style.transform = `translateX(${position}px)`;
-
-                requestAnimationFrame(animate);
-            }
-
-            animate ();
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!------------------------------------------------------- Javascript ----------------------------------------------------------->
+<script language="javascript">
+function marqueelike() {
+$('.messagedefilant').each(function() {
+    var texte = $(this).html();
+    $(this).html('<div><span>' + texte + '</span><span>' + texte + '</span></div>');
+  });
+}
+ 
+$(window).on('load', function() {
+  marqueelike();
+});
+</script>
     </head>
 <body>
     <header id="kkfa">
         <h1>Kra Kouakou Franck Arnaud</h1>
         <div class="contenant">
-            <P class="texte-defilant" id="texte-defilant"> PSAME 60V14 : Avec DIEU, nous ferons des exploits; il écrasera nos énemis.</P>
+            <div class="texte-defilant">
+            <P> PSAME 60V14 : Avec DIEU, nous ferons des exploits; il écrasera nos énemis.</P>&nbsp;
+            </div>
         </div>
     </header>
     <div id="principal">
@@ -56,3 +54,4 @@
 
 </body>
 </html>
+
