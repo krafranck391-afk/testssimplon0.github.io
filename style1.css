@@ -136,16 +136,91 @@ img
 
 
 
-.contenant
-{
-    overflow: hidden;
-    white-space: nowrap;
-    background: #333;
-    color: white;
-    padding: 10px 0;
+<!---------------------------------------------------------- CSS -------------------------------------------------------------->
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap'); /* récupère une Typographie depuis google font :
+https://fonts.google.com/
+*/
+
+/* Site pour choisir une couleur en hexadécimal :
+https://htmlcolorcodes.com/fr/selecteur-de-couleur/
+*/
+
+.conteneur, .messagedefilant {
+  --Typo:'Oswald', sans-serif; /* Typographie depuis google font */
+  --Typo_Taille_Bold: 30pt; /* Taille de la typographie Bold*/
+  --Typo_Taille_Light: 30pt; /* Taille de la typographie Light*/
+  --Typo_Couleur : white; /* Couleur de la typographie*/
+  --Typo_Bold: 500; /* graisse du Bold */
+  --Typo_Light: 200; /* graisse du Light */
+  --Vitesse: 20s; /* Vitesse de défillement */
+  --Couleur_de_fond: lightseagreen;/* choisir la couleur de fond */
+	margin: 0px;
+	height:100%;
+	width:100%;
+  overflow: hidden;
 }
-.texte-defilant
-{
-    display: inline-block;
-    padding-left: 100%;
+
+.Conteneur{
+  position: relative;
+	width: 100%;
+	height: 100%;
+	display:flex;
+	flex-direction:column;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+	background-color: var(--Couleur_de_fond); 
 }
+
+/* Texte défilant */
+.messagedefilant {
+	margin: auto;
+	display: inline-block;
+  	width: 100%;
+/* Style de texte */
+  	font-family: var(--Typo);
+  	font-size: var(--Typo_Taille_Bold);
+  	color: var(--Typo_Couleur);
+}
+
+b{ font-weight: var(--Typo_Bold) }
+
+i{
+  font-size: var(--Typo_Taille_Light);
+	font-style: normal; /* enlève l'italic de la balise i */
+	font-weight: var(--Typo_Light); 
+}
+
+a{ text-decoration: none;  /* enlève les underline que pourrais provoqué la balise a */ }
+	
+.messagedefilant div {
+  position: absolute;
+  transform: translateY(-50%);
+  min-width: 100%;
+}
+
+.messagedefilant div span {
+  left:0;
+}
+	
+/* Animation */
+.messagedefilant div span:first-child {
+  animation: defilement var(--Vitesse) infinite linear; /* Vitesse de défillement !!! les 2 vitesses doivent être identique !!! */
+}
+ 
+.messagedefilant div span:last-child {
+  position: absolute;
+  animation: defilement2 var(--Vitesse) infinite linear; /* Vitesse de défillement !!! les 2 vitesses doivent être identique !!! */
+}
+ 
+@keyframes defilement {
+  0% { margin-left: 0; }
+  100% { margin-left: -100%; }
+}
+ 
+@keyframes defilement2 {
+  0% { margin-left: 100%; }
+  100% { margin-left: 0%; }
+}
+</style>
